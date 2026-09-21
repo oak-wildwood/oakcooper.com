@@ -76,7 +76,7 @@ export function TestimonialCarousel({
         <div
           role="group"
           aria-label="Choose a recommendation"
-          className="mt-8 flex items-center gap-2.5 pl-[calc(2rem+0.75rem)] sm:pl-[calc(2rem+1.5rem)]"
+          className="mt-8 flex items-center gap-2.5 pl-[calc(2.75rem+0.75rem)] sm:pl-[calc(2.75rem+1.5rem)]"
         >
           {testimonials.map((t, i) =>
             i === index ? (
@@ -125,7 +125,7 @@ function NavButton({
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="flex h-11 w-8 shrink-0 items-center justify-center font-mono text-lg text-paper-dim transition-colors hover:text-gold disabled:pointer-events-none disabled:opacity-30"
+      className="flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-full border border-line-700 font-mono text-lg text-paper-dim transition-colors hover:border-gold-line hover:text-gold focus-visible:border-gold-line focus-visible:text-gold disabled:pointer-events-none disabled:opacity-30"
     >
       {glyph}
     </button>
