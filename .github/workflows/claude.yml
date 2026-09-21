@@ -56,7 +56,10 @@ jobs:
           # 2026-09-17 in cadre when a real run had no Write/Edit in ALLOWED_TOOLS, could only
           # Read/Glob/Grep, and died after 11 straight permission denials trying to create files.
           # Write and Edit are listed explicitly below for that reason, alongside the scripts
-          # Claude needs to install deps and verify its own changes.
+          # Claude needs to install deps and verify its own changes. Same override behavior
+          # also swallows git — without explicit git entries Claude can edit files but never
+          # branch/commit/push (confirmed 2026-09-21 in cooperage's nightly workflow, which
+          # shares this allowlist pattern: a real run edited nothing and never opened a PR).
           claude_args: |
             --model ${{ steps.model.outputs.model }}
-            --allowedTools "Write,Edit,Bash(npm install:*),Bash(npm ci:*),Bash(npm run test:*),Bash(npm run build:*),Bash(npm run lint:*)"
+            --allowedTools "Write,Edit,Bash(npm install:*),Bash(npm ci:*),Bash(npm run test:*),Bash(npm run build:*),Bash(npm run lint:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*)"
