@@ -79,6 +79,11 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
+          # TEMPORARY debug flag — remove after diagnosing why the 2026-09-21
+          # test run (fix/nightly-git-permissions, PR #33) still hit 13
+          # permission denials and never created a branch/PR.
+          show_full_output: true
+
           additional_permissions: |
             actions: read
 
