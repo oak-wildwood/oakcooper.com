@@ -92,9 +92,14 @@ jobs:
           # Write/Edit grant instead of adding to it, so list them explicitly
           # or the agent can look at the repo but not change it. Kept in sync
           # with claude.yml's scoped npm script list rather than a blanket
-          # Bash(npm:*), plus gh for opening the resulting PR.
+          # Bash(npm:*), plus gh for opening the resulting PR. Also needs git
+          # commands explicitly — without them Claude can edit files and run
+          # npm scripts but has no way to branch/commit/push, so `gh pr
+          # create` has nothing to open a PR from (confirmed 2026-09-21: a
+          # real nightly run edited nothing, hit 27 permission denials, and
+          # exited without a PR).
           claude_args: |
-            --allowedTools "Write,Edit,Bash(npm install:*),Bash(npm ci:*),Bash(npm run test:*),Bash(npm run build:*),Bash(npm run lint:*),Bash(gh pr create:*),Bash(gh pr view:*)"
+            --allowedTools "Write,Edit,Bash(npm install:*),Bash(npm ci:*),Bash(npm run test:*),Bash(npm run build:*),Bash(npm run lint:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(gh pr create:*),Bash(gh pr view:*)"
 
       - name: Clear the claim on success
         if: success()
