@@ -79,11 +79,6 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
-          # TEMPORARY debug flag — remove after diagnosing why the 2026-09-21
-          # test run (fix/nightly-git-permissions, PR #33) still hit 13
-          # permission denials and never created a branch/PR.
-          show_full_output: true
-
           additional_permissions: |
             actions: read
 
@@ -102,9 +97,17 @@ jobs:
           # npm scripts but has no way to branch/commit/push, so `gh pr
           # create` has nothing to open a PR from (confirmed 2026-09-21: a
           # real nightly run edited nothing, hit 27 permission denials, and
-          # exited without a PR).
+          # exited without a PR). Also needs `gh issue view` explicitly: in
+          # this schedule/workflow_dispatch ("agent") mode, unlike the
+          # comment-triggered claude.yml, the action does not auto-inject
+          # issue context into the prompt — only the bare issue number is
+          # there, so without this Claude can't read the issue it was told
+          # to work on (confirmed 2026-09-21: a run with git permissions
+          # fixed still failed, self-diagnosing that `gh issue view` was
+          # denied every time and it had no other way to see issue #30's
+          # body).
           claude_args: |
-            --allowedTools "Write,Edit,Bash(npm install:*),Bash(npm ci:*),Bash(npm run test:*),Bash(npm run build:*),Bash(npm run lint:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(gh pr create:*),Bash(gh pr view:*)"
+            --allowedTools "Write,Edit,Bash(npm install:*),Bash(npm ci:*),Bash(npm run test:*),Bash(npm run build:*),Bash(npm run lint:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(gh issue view:*),Bash(gh pr create:*),Bash(gh pr view:*)"
 
       - name: Clear the claim on success
         if: success()
