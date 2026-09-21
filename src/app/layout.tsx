@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Newsreader, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Menu } from "@/components/Menu";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full">
         <Menu />
         {children}
+        <Analytics />
       </body>
     </html>
   );
