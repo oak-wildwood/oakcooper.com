@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# cooperage — project context
+# oakcooper.com — project context
 
 > **Start here: [`PLAN.md`](./PLAN.md).** It carries the settled design direction, the
 > reasoning behind each decision, what is built, and what is left. Read it before
@@ -89,7 +89,7 @@ The replacement roster, and the design primitive it implies:
 |---|---|
 | Work Search Log — public repo, tests, a11y, genuinely finished | Polished |
 | Postmarked — postcard-tracking PWA, used daily; needs a design revamp first | Polished |
-| `cooperage` itself — public repo at launch, the code is the exhibit | In progress |
+| `oakcooper.com` itself — public repo at launch, the code is the exhibit | In progress |
 | A prototype — none exist yet; tier may be empty at launch | Prototype |
 | Recipe site | Planned |
 
