@@ -1,4 +1,4 @@
-# cooperage
+# oakcooper.com
 
 Personal dev portfolio for Oak Cooper — a ground-up rebuild of [oakcooper.com](https://oakcooper.com),
 moving off a 2020-era Gatsby 2 site.

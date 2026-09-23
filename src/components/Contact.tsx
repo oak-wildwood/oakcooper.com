@@ -53,7 +53,7 @@ export function Contact() {
         <p className="mt-16 font-mono text-[11px] tracking-[0.12em] text-paper-ghost">
           BUILT WITH NEXT 16 AND REACT SERVER COMPONENTS. SOURCE ON{" "}
           <a
-            href="https://github.com/oak-wildwood/cooperage"
+            href="https://github.com/oak-wildwood/oakcooper.com"
             target="_blank"
             rel="noopener noreferrer"
             className="underline decoration-line-700 underline-offset-2 transition-colors hover:text-gold hover:decoration-gold"

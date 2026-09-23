@@ -205,17 +205,17 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    slug: "cooperage",
-    name: "Dev Portfolio",
+    slug: "oakcooper",
+    name: "oakcooper.com",
     tier: "building",
     year: "2026",
     blurb:
       "This site. Next 16 and React Server Components, written in the open — the repository is as much the exhibit as the page you are reading.",
     stack: ["Next 16", "RSC", "Tailwind v4", "TypeScript"],
-    repo: "https://github.com/oak-wildwood/cooperage",
+    repo: "https://github.com/oak-wildwood/oakcooper.com",
     screens: [
       {
-        src: "/screens/cooperage/home.png",
+        src: "/screens/oakcooper/home.png",
         alt: "This site's hero section: name, role, a quick-reference panel, and the start of the About section below.",
         caption: "The repository is as much the exhibit",
         width: 3530,
