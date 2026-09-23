@@ -32,6 +32,7 @@ export const ROLES: Role[] = [
       "Co-led the Vue 2 → Vue 3 / Vuetify 3 migration of a ~300-component application, clearing the Vuetify breakages that were the migration's biggest blocker.",
       "Migrated state management from a hand-rolled GraphQL client to Pinia, centralizing data-fetching and state across the ~300-component app during that migration.",
       "Moved the deployment pipeline off Vercel and GitHub Actions onto AWS and Jenkins, rebuilding branch previews from scratch — saving ~$80K/yr.",
+      "Authored an error-handling and logging standard adopted across services in multiple languages and teams.",
       "Built an itemized reconditioning workflow for vehicle appraisals, replacing lump-sum entry with editable, GraphQL-backed line items.",
       "Built frontend browser observability from scratch, twice — New Relic, then Datadog RUM — adding anomaly detection to catch the silent failures threshold alerts miss.",
       "Cut local test-suite runtime in half and memory use by 66%, then encoded the fixes into an automated pre-PR review step.",
