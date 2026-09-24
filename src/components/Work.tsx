@@ -1,6 +1,8 @@
 import { ProjectPanel } from "./ProjectPanel";
 import { PROJECTS } from "@/lib/projects";
 
+const VISIBLE_PROJECTS = PROJECTS.filter((project) => !project.hidden);
+
 /**
  * The stack lives inside this wrapper on purpose.
  *
@@ -29,7 +31,7 @@ export function Work() {
       </div>
 
       <div>
-        {PROJECTS.map((project, i) => (
+        {VISIBLE_PROJECTS.map((project, i) => (
           <ProjectPanel key={project.slug} project={project} index={i} />
         ))}
       </div>
