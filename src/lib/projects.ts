@@ -49,6 +49,8 @@ export type Project = {
   live?: string;
   /** Empty is legitimate — a prototype with nothing to show says so. */
   screens: Screen[];
+  /** Kept in the roster but not rendered — for work that isn't ready to show yet. */
+  hidden?: boolean;
 };
 
 export const PROJECTS: Project[] = [
@@ -232,5 +234,6 @@ export const PROJECTS: Project[] = [
       "A place for the recipes that already work. Angular on purpose: eight years of it in production (2014–2022) and nothing public to point at.",
     stack: ["Angular", "TypeScript", "Signals"],
     screens: [],
+    hidden: true,
   },
 ];
