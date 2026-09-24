@@ -258,6 +258,16 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   Left `PROFILE.claim` and `SKILLS` untouched — both are deliberate site-voice
   edits (see the voice pass above and the frontend-only positioning call), not a
   transcription of the resume, so they don't move just because the PDF did.
+- ✅ **Resume refresh — done 2026-09-23.** New PDF from
+  `~/Documents/2026 Job Search/Oak Cooper Resume 2026.pdf` replaced the old one.
+  Added one new ACV bullet to `resume.ts` — the error-handling/logging standard
+  adopted across services in multiple languages and teams — as the standout new
+  fact. Left out the PDF's other new bullet (role-based navigation for the
+  multi-dealer product): it's feature work similar in kind to the reconditioning
+  bullet already on the site, and adding both would've pushed the role past the
+  5-7 bullet ceiling for no real gain in distinctiveness. `PROFILE.claim`,
+  `SKILLS` (backend/NestJS still deliberately excluded), and all other roles
+  unchanged — no new facts there this round.
 
 ### 5. Phase 4 — Server features
 
