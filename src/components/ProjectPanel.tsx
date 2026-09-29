@@ -64,7 +64,7 @@ export function ProjectPanel({
           )}
 
           <p className="mt-6 max-w-[44ch] font-read text-[18px] font-light leading-relaxed text-paper-mute">
-            {project.blurb}
+            <InlineCode text={project.blurb} />
           </p>
 
           <ul className="mt-7 flex flex-wrap gap-2">
@@ -137,5 +137,24 @@ export function ProjectPanel({
         </div>
       </div>
     </section>
+  );
+}
+
+/**
+ * Renders `backticked` spans as inline code, so a blurb can name a command or
+ * mention the way Markdown does. Content stays a plain string in `projects.ts`.
+ */
+function InlineCode({ text }: { text: string }) {
+  return text.split("`").map((part, i) =>
+    i % 2 === 1 ? (
+      <code
+        key={i}
+        className="bg-ink-700 px-1.5 py-0.5 font-mono text-[0.85em] text-paper-dim"
+      >
+        {part}
+      </code>
+    ) : (
+      part
+    ),
   );
 }

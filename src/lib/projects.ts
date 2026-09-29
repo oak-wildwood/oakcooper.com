@@ -43,6 +43,7 @@ export type Project = {
   tagline?: string;
   tier: Tier;
   year: string;
+  /** Plain text; `backticked` spans render as inline code. */
   blurb: string;
   stack: string[];
   repo?: string;
@@ -61,7 +62,7 @@ export const PROJECTS: Project[] = [
     tier: "polished",
     year: "2026",
     blurb:
-      "Comment @flytrap on a pull request and get a review back: a verdict, then an inline comment on each finding, with a suggested change where it has one. The model gets read-only tools and never writes to GitHub, and its output is validated against a schema before anything posts.",
+      "Comment `@flytrap` on a pull request and get one review back: a verdict, then an inline comment on each finding, with a suggested change where it has one. The model can only read code and return findings; a separate script validates them against a schema and posts the review. A malicious diff can produce a bad review, but never an approval or a push.",
     stack: ["Node.js", "GitHub Actions", "Claude API", "JSON Schema"],
     repo: "https://github.com/oak-wildwood/flytrap",
     screens: [
