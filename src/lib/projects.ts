@@ -55,6 +55,40 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "flytrap",
+    name: "Flytrap",
+    tagline: "LLM code review",
+    tier: "polished",
+    year: "2026",
+    blurb:
+      "Comment @flytrap on a pull request and get a review back: a verdict, then an inline comment on each finding, with a suggested change where it has one. The model gets read-only tools and never writes to GitHub, and its output is validated against a schema before anything posts.",
+    stack: ["Node.js", "GitHub Actions", "Claude API", "JSON Schema"],
+    repo: "https://github.com/oak-wildwood/flytrap",
+    screens: [
+      {
+        src: "/screens/flytrap/request-changes.png",
+        alt: "A Flytrap review on a pull request with a Request Changes verdict. The summary says an isExpired helper compares expiry dates backwards, and the review lists two findings.",
+        caption: "A verdict, and why",
+        width: 2086,
+        height: 948,
+      },
+      {
+        src: "/screens/flytrap/blocker.png",
+        alt: "An inline Flytrap comment on the line of code with the bug, marked Blocker, explaining the inverted comparison, with a suggested change that swaps the greater-than for less-than-or-equal and an Apply suggestion button.",
+        caption: "The fix, one click away",
+        width: 1964,
+        height: 1260,
+      },
+      {
+        src: "/screens/flytrap/approve.png",
+        alt: "The same pull request re-reviewed after the fix: a Flytrap Approve verdict, a summary of what the change does and why it is consistent with the rest of the code, and no findings.",
+        caption: "Approves once it's fixed",
+        width: 2062,
+        height: 888,
+      },
+    ],
+  },
+  {
     slug: "work-search-log",
     name: "Work Search Log",
     tier: "polished",
