@@ -87,10 +87,10 @@ The replacement roster, and the design primitive it implies:
 
 | Project | Tier |
 |---|---|
-| Flytrap — LLM-powered PR review, open source, released as v1 | Polished |
-| Work Search Log — public repo, tests, a11y, genuinely finished | Polished |
 | Cairn — IFS parts map, public repo | Polished |
+| Flytrap — LLM-powered PR review, open source, released as v1 | Polished |
 | Postmarked — postcard-tracking PWA, used daily; needs a design revamp first | Polished |
+| Work Search Log — public repo, tests, a11y, genuinely finished | Polished |
 | `oakcooper.com` itself — public repo at launch, the code is the exhibit | In progress |
 | A prototype — none exist yet; tier may be empty at launch | Prototype |
 | Recipe site — in the roster but hidden (`hidden: true` in `projects.ts`) | Planned |
