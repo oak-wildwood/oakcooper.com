@@ -67,10 +67,10 @@ export const PROJECTS: Project[] = [
     screens: [
       {
         src: "/screens/flytrap/request-changes.png",
-        alt: "A Flytrap review on a pull request with a Request Changes verdict. The summary says an isExpired helper compares expiry dates backwards, and the review lists two findings.",
-        caption: "A verdict, and why",
-        width: 2086,
-        height: 948,
+        alt: "A pull request comment reading @flytrap, followed by Flytrap's review with a Request Changes verdict. The summary says an isExpired helper compares expiry dates backwards, and the review lists two findings.",
+        caption: "Comment @flytrap, get a verdict",
+        width: 2220,
+        height: 1502,
       },
       {
         src: "/screens/flytrap/blocker.png",
