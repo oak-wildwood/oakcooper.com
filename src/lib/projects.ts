@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
     blurb:
       "Comment `@flytrap` on a pull request and get one review back: a verdict, then an inline comment on each finding, with a suggested change where it has one. The model can only read code and return findings; a separate script validates them against a schema and posts the review. A malicious diff can produce a bad review, but never an approval or a push.",
-    stack: ["Node.js", "GitHub Actions", "Claude API", "JSON Schema"],
+    stack: ["Node.js", "GitHub Actions", "Claude", "JSON Schema", "LLM evals"],
     repo: "https://github.com/oak-wildwood/flytrap",
     screens: [
       {
