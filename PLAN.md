@@ -49,8 +49,9 @@ clearest illustration of the server/client boundary.
 
 Audience is **recruiters and hiring managers**, not designers.
 
-The argument is Oak's **professional record** — the Vue 3 migration, the ~$80K/yr
-pipeline saving, observability built twice, AI guardrails, team leadership. The side
+The argument is Oak's **professional record** — the NestJS/GraphQL services and the
+Vue app in front of them, the Vue 3 migration, the ~$80K/yr pipeline saving,
+observability built twice, AI guardrails, team leadership. The side
 projects are **evidence for that claim, not the claim itself**. Hence: claim first,
 evidence after.
 
@@ -59,9 +60,16 @@ That advice comes from *designer* portfolios, where the work is the product, and
 is wrong here — leading with small personal apps reads as a ceiling rather than a
 footnote. Corrected.
 
-Positioning is **design-centric frontend**. The sixteen years of full-stack .NET are
-credibility supporting that claim — one line in About — never a co-headline. A site
-that claims frontend *and* backend *and* design systems claims nothing.
+Positioning is **fullstack** — Node/NestJS and Vue, backed by a decade-plus of .NET.
+Changed 2026-11-05 from the original *design-centric frontend* call. The frontend-only
+search drew few responses, and the record already held the backend evidence (NestJS
+microservices at ACV, ASP.NET at Dick's and Morneau Shepell) without the headline
+using it. The one-claim rule still holds: the claim is *fullstack*, and design systems
+dropped out of it rather than becoming a third co-headline. Backend wording stays
+within what Oak actually did — he *contributed to* the NestJS services and *helped*
+split data access into domain microservices; he did not own them. Kubernetes is
+working knowledge, not expertise. Source of truth for these limits:
+`~/Vault/Job Search 2026/Fullstack Resume Update 2026-10-30.md`.
 
 ### Three-second claim
 
@@ -116,7 +124,7 @@ plus glow for witnessed parts, dashed and unglowing for emerging ones.
 
 ```
 01 Hero            name, title, claim, and every external link (GitHub, LinkedIn, resume)
-02 About           bio; design-centric frontend; .NET as one supporting line
+02 About           bio; both sides of the API; the .NET decade as the backstory
 03 Experience      the record and the numbers
 04 Skills          banded by depth, honestly
 05 Work            the sticky panel stack — evidence
@@ -269,6 +277,31 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   `SKILLS` (backend/NestJS still deliberately excluded), and all other roles
   unchanged — no new facts there this round.
 
+- ✅ **Fullstack repositioning — done 2026-11-05.** Site now serves the Fullstack
+  resume (`~/Documents/2026 Job Search/Oak Cooper Resume 2026 (Fullstack).pdf`)
+  and claims fullstack throughout: metadata, Hero title/claim/facts, About,
+  Contact status line. ACV bullets reordered backend-first (NestJS layer, domain
+  microservice split, ADR); Pinia folded into the Vue 3 bullet; the
+  reconditioning-workflow bullet dropped (not on the fullstack resume). Dick's
+  gained the ASP.NET MVC bullet in place of the Angular 4→8 upgrade. Rockwater
+  left `EARLIER`, as on the resume. Skills: the Deep band split into Frontend and
+  Backend, both "years of production work"; CSS architecture and Accessibility
+  dropped (accessibility was already ruled out as an angle — see the voice pass);
+  Kubernetes and GitHub Actions added to Platform. React/Next.js stay in the
+  dashed band even though the resume lists them under Frontend — the site's
+  banding is by depth, and they're recent. Postmarked's blurb and stack now show
+  its Firebase backend. Hero facts: the stack split into Frontend and Backend
+  rows; "Based: Remote" dropped (Contact already says remote); "Also known for"
+  now reads "AI guardrails · an eye for UX". That's a deliberate exception to the
+  voice pass's "don't lean on UX": it's one short phrase, not a positioning angle,
+  and a product designer's recommendation in Testimonials backs it ("exceptional
+  user experience insight to design reviews"). About's lead line opens with
+  "Product-minded" — the one place that word lives, so it isn't repeated
+  across sections. The design itself is unchanged: "meticulous", Editorial,
+  and the maturity axis all carry over. Gap: the Work section is still mostly
+  frontend; Job Funnel is the strongest backend side project but its repo can't
+  go public as-is (see the Vault note). A trimmed public repo is the next step.
+
 ### 5. Phase 4 — Server features
 
 Contact form as a **Server Action** (Oak writes this — highest-value learning in the
@@ -310,6 +343,7 @@ tooling, and config were always fair game to just do.
   `~/Vault/Projects/Portfolio Design Inspiration Sourcing 2026-08-23.md`
 - Approved mockups (7 artboards, Editorial direction):
   https://claude.ai/code/artifact/143aa9e0-35cd-423d-adbb-c8523ab43268
-- Resume: `~/Documents/2026 Job Search/Oak Cooper Resume 2026.pdf`
+- Resume: `~/Documents/2026 Job Search/Oak Cooper Resume 2026 (Fullstack).pdf` (the
+  site serves this one; `(Frontend).pdf` beside it is for frontend-only applications)
 - Cairn's palette, which is the source of this site's accent:
   `~/Code/cairn/src/lib/theme.ts`

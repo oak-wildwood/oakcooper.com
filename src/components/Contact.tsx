@@ -25,7 +25,7 @@ export function Contact() {
               style={{ boxShadow: "0 0 7px rgba(232,201,140,.8)" }}
             />
             <span className="font-mono text-[11.5px] font-semibold tracking-[0.18em] text-gold">
-              OPEN TO WORK — FRONTEND &amp; DESIGN ENGINEERING, REMOTE
+              OPEN TO WORK — FULLSTACK ENGINEERING, REMOTE
             </span>
           </div>
         )}

@@ -2,9 +2,9 @@ import { PROFILE } from "@/lib/resume";
 
 const FACTS = [
   { k: "Most recent", v: "ACV Auctions", meta: "2022–26" },
-  { k: "Depth", v: "Vue · Angular · TypeScript" },
-  { k: "Also known for", v: "AI guardrails" },
-  { k: "Based", v: "Remote" },
+  { k: "Frontend", v: "Vue · Angular · TypeScript" },
+  { k: "Backend", v: "Node · NestJS · .NET / C#" },
+  { k: "Also known for", v: "AI guardrails · an eye for UX" },
   { k: "Projects below", v: "5, tiered honestly", gold: true },
 ];
 
@@ -104,7 +104,7 @@ export function Hero() {
                   {k.toUpperCase()}
                 </dt>
                 <dd
-                  className={`text-[15px] ${gold ? "text-gold" : "text-paper"}`}
+                  className={`text-right text-[15px] ${gold ? "text-gold" : "text-paper"}`}
                 >
                   {v}
                   {meta && <span className="text-paper-faint"> {meta}</span>}
