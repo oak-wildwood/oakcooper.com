@@ -109,8 +109,8 @@ for the site's one signature move.
   reading copy, JetBrains Mono labels. One accent — `#E8C98C`, the gold lifted from
   Cairn's own `theme.ts` — rationed to the tier meter, one rule, the status dot, links.
 - **Audience is recruiters and hiring managers**, not designers. Claim first, evidence
-  after. Positioning is *design-centric frontend*; the .NET years are credibility
-  supporting that claim, never a co-headline.
+  after. Positioning is *fullstack* — Node/NestJS and Vue, backed by a decade-plus of
+  .NET (changed 2026-11-05 from design-centric frontend; see `PLAN.md` Positioning).
 - **Signature move: the maturity axis** — Polished · In progress · Prototype · Planned,
   carried by a four-step meter, never by varying typography.
 - **Oak's own nature photography** is in play, deliberately restrained — subdued

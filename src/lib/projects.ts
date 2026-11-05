@@ -136,8 +136,8 @@ export const PROJECTS: Project[] = [
     tier: "polished",
     year: "2025",
     blurb:
-      "A postcard tracker my household opens every day — address book, photos, and where each card is on its way to. Built for us, kept because it works.",
-    stack: ["Vue 3", "Pinia", "Firebase", "PWA"],
+      "A postcard tracker my household opens every day — address book, photos, and where each card is on its way to. Google sign-in limited to an allowlist, separate staging and production Firebase projects, and encrypted Firestore backups. Built for us, kept because it works.",
+    stack: ["Vue 3", "Pinia", "Firebase Auth", "Firestore", "PWA"],
     screens: [
       {
         src: "/screens/postmarked/mobile-dashboard-light.png",

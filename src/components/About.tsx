@@ -11,26 +11,28 @@ export function About() {
 
         <div className="col-span-12 lg:col-span-9">
           <p className="max-w-[48ch] font-read text-[clamp(1.35rem,2.2vw,1.75rem)] font-light leading-[1.45] text-paper">
-            Senior frontend engineer. Hand me an unfamiliar codebase and a
-            loosely-defined problem and I turn it into shipped, tested,
-            monitored code.
+            Product-minded senior fullstack engineer. Hand me an unfamiliar
+            codebase and a loosely-defined problem and I turn it into shipped,
+            tested, monitored code.
           </p>
 
           <p className="mt-6.5 max-w-[64ch] font-read text-[17px] font-light leading-[1.7] text-paper-mute">
-            What I care about most is where design and engineering meet —
-            design systems, component libraries, the shared vocabulary that
-            keeps a product from drifting apart. Most of the last four years
-            went into that same Vue app: building features, co-leading the
-            move to Vue&nbsp;3, and rebuilding the deployment and
-            observability underneath it.
+            I work on both sides of the API. Most of the last four years went
+            into one Vue app and the NestJS services behind it: building
+            features from the UI through GraphQL to the domain services,
+            helping pull data access out of overgrown resolvers into dedicated
+            microservices, co-leading the move to Vue&nbsp;3, and rebuilding
+            the deployment and observability underneath all of it.
           </p>
 
           <p className="mt-5 max-w-[64ch] font-read text-[17px] font-light leading-[1.7] text-paper-mute">
-            Before that, over a decade of full-stack work — ASP.NET among it —
-            which is mostly why I have opinions about the API my components have
-            to consume. The work I am proudest of is invisible: the form that
-            survives a dropped connection, the table that stays readable at 200%
-            zoom, the test suite that runs in half the time it used to.
+            Before that came over a decade of .NET — ASP.NET, C#, SQL Server —
+            and then Angular, which is why I have opinions about the API a
+            component has to consume and the component an API has to serve.
+            The work I am proudest of is invisible: the error that reaches
+            Datadog with enough context to act on, the form that survives a
+            dropped connection, the test suite that runs in half the time it
+            used to.
           </p>
         </div>
       </div>
