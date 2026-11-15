@@ -9,7 +9,7 @@ export const PROFILE = {
   resume: "/oak-cooper-resume-2026.pdf",
   available: true,
   claim:
-    "Senior fullstack engineer — I notice the friction other people don't, until it's gone. Twenty-five years, from .NET backends to Angular and Vue. The last four went into a ~300-component Vue app and the NestJS/GraphQL services behind it: I built features across both, co-led its move to Vue 3, and set how the team used AI without letting speed cost quality.",
+    "I build the UI, and I own whether it works for the user once it ships. Twenty-five years in software, from .NET backends to Angular and Vue. The last four went into a ~300-component Vue app and the NestJS/GraphQL services behind it: I built features across both, co-led its move to Vue 3, and set how the team used AI without letting speed cost quality.",
 } as const;
 
 export type Role = {

@@ -11,12 +11,20 @@ export function About() {
 
         <div className="col-span-12 lg:col-span-9">
           <p className="max-w-[48ch] font-read text-[clamp(1.35rem,2.2vw,1.75rem)] font-light leading-[1.45] text-paper">
-            Product-minded senior fullstack engineer. Hand me an unfamiliar
-            codebase and a loosely-defined problem and I turn it into shipped,
-            tested, monitored code.
+            Product engineer. Tests for the parts that have to be right every
+            time. Models for the parts that are better with a good guess. Me
+            for knowing which is which.
           </p>
 
           <p className="mt-6.5 max-w-[64ch] font-read text-[17px] font-light leading-[1.7] text-paper-mute">
+            These days an agent does a lot of the typing. I decide
+            what&rsquo;s worth building, brief it, and prove the result did what
+            I asked. I led Claude Code adoption on my team at ACV and wrote the
+            conventions it followed, so the speed didn&rsquo;t cost us
+            consistency.
+          </p>
+
+          <p className="mt-5 max-w-[64ch] font-read text-[17px] font-light leading-[1.7] text-paper-mute">
             I work on both sides of the API. Most of the last four years went
             into one Vue app and the NestJS services behind it: building
             features from the UI through GraphQL to the domain services,
