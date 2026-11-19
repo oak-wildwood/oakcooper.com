@@ -302,6 +302,18 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   frontend; Job Funnel is the strongest backend side project but its repo can't
   go public as-is (see the Vault note). A trimmed public repo is the next step.
 
+- ✅ **Resume refresh — done 2026-11-18.** New PDF from
+  `~/Documents/2026 Job Search/Oak Cooper Resume 2026 (Fullstack).pdf` (product-engineer
+  framing, Oak's fact corrections). ACV bullets synced: added the embed auth fix, the
+  outage-alert story, and Claude Code adoption with the team's use of the PR-description
+  skill; previews now say other teams adopted them; monitoring now says "linked browser
+  sessions to backend traces". Dropped the data-access bullet (cut from the resume as weaker
+  evidence), the "guardrails / ran interviews" bullet (replaced on the resume), and the
+  test-suite bullet (still on the PDF; left off to keep the role at 8 bullets). Facts to
+  keep straight: the PR skill was adopted by **the team**, not the org; Oak used feature
+  flags but didn't implement them; say "linked to backend traces", not OTel.
+  `PROFILE.claim`, `SKILLS`, other roles and `EARLIER` unchanged (site voice; no new facts).
+
 ### 5. Phase 4 — Server features
 
 Contact form as a **Server Action** (Oak writes this — highest-value learning in the

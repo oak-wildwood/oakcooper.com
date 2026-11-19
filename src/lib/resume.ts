@@ -30,13 +30,13 @@ export const ROLES: Role[] = [
     company: "ACV Auctions · ACV MAX",
     bullets: [
       "Contributed to the NestJS microservice layer behind a Vue/GraphQL platform, building features end to end across the UI, GraphQL, and domain services backed by SQL Server, Postgres, MongoDB, and third-party APIs.",
-      "Helped move data-access logic out of GraphQL resolvers into dedicated domain microservices — database-specific services first, then domain-focused ones.",
+      "Closed an unauthenticated path to production data on customer-facing dealer widgets by moving embed traffic behind an authenticated proxy and gateway, with no downtime.",
       "Authored an ADR standardizing error handling and logging across NestJS, C#, Python, and Go services, adopted by multiple teams.",
       "Co-led the Vue 2 → Vue 3 / Vuetify 3 migration of a ~300-component application, clearing the Vuetify breakages that were its biggest blocker and moving state from a hand-rolled GraphQL client to Pinia.",
-      "Moved the frontend deployment pipeline off Vercel and GitHub Actions onto AWS and Jenkins, rebuilding branch previews from scratch — saving ~$80K/yr.",
-      "Built frontend browser observability from scratch, twice — New Relic, then Datadog RUM — adding anomaly detection to catch the silent failures threshold alerts miss.",
-      "Cut local test-suite runtime in half and memory use by 66%, then encoded the fixes into an automated pre-PR review step.",
-      "Engineered the guardrails that keep AI-generated code trustworthy, and ran coding and systems-design interviews as the team scaled across the US and India.",
+      "Moved frontend deploys off Vercel onto AWS and Jenkins, saving ~$80K/yr, and rebuilt branch previews as a shared library that other teams adopted.",
+      "Set up browser monitoring twice — New Relic, then Datadog — and linked browser sessions to backend traces, so a slow page could be traced to the API behind it.",
+      "Designed the alert for the outage nobody saw: after a 2-hour GraphQL outage passed every existing check, replaced brittle threshold alerts with one self-learning anomaly monitor on GraphQL trace volume.",
+      "Led Claude Code adoption on the team and wrote the conventions it follows; the team uses a PR-description skill I built.",
     ],
   },
   {
