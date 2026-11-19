@@ -1,4 +1,4 @@
-import { PROFILE } from "@/lib/resume";
+import { PROFILE, RESUMES } from "@/lib/resume";
 import { ContactForm } from "@/components/ContactForm";
 
 export function Contact() {
@@ -34,18 +34,35 @@ export function Contact() {
           {[
             { href: PROFILE.linkedin, label: "LINKEDIN ↗" },
             { href: PROFILE.github, label: "GITHUB ↗" },
-            { href: PROFILE.resume, label: "RESUME ↓" },
-          ].map(({ href, label }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("http") ? "_blank" : undefined}
-              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="inline-flex h-11.5 items-center border border-line-700 px-5.5 font-mono text-xs font-semibold tracking-[0.13em] text-paper transition-colors hover:border-line-600 hover:text-gold"
-            >
-              {label}
-            </a>
-          ))}
+            ...RESUMES.map(({ href, label, download }) => ({
+              href,
+              label: `${label} ↓`,
+              download,
+            })),
+          ].map(
+            ({
+              href,
+              label,
+              download,
+            }: {
+              href: string;
+              label: string;
+              download?: string;
+            }) => (
+              <a
+                key={label}
+                href={href}
+                download={download}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
+                className="inline-flex h-11.5 items-center border border-line-700 px-5.5 font-mono text-xs font-semibold tracking-[0.13em] text-paper transition-colors hover:border-line-600 hover:text-gold"
+              >
+                {label}
+              </a>
+            ),
+          )}
         </div>
 
         <ContactForm />

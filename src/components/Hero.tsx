@@ -1,4 +1,4 @@
-import { PROFILE } from "@/lib/resume";
+import { PROFILE, RESUMES } from "@/lib/resume";
 
 const FACTS = [
   { k: "Most recent", v: "ACV Auctions", meta: "2022–26" },
@@ -71,23 +71,30 @@ export function Hero() {
             {[
               { href: PROFILE.github, label: "GITHUB ↗" },
               { href: PROFILE.linkedin, label: "LINKEDIN ↗" },
-              {
-                href: PROFILE.resume,
-                label: "RESUME ↓",
-                download: "Oak-Cooper-Resume-2026.pdf",
-              },
-            ].map(({ href, label, download }) => (
+            ].map(({ href, label }) => (
               <a
                 key={label}
                 href={href}
-                download={download}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  href.startsWith("http") ? "noopener noreferrer" : undefined
-                }
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-11.5 items-center border border-line-700 px-5.5 font-mono text-xs font-semibold tracking-[0.13em] text-paper transition-colors hover:border-line-600 hover:text-gold"
               >
                 {label}
+              </a>
+            ))}
+          </div>
+
+          {/* The two resumes get their own row so they read as a pair rather
+              than one button wrapping onto a line by itself. */}
+          <div className="mt-2.5 flex flex-wrap gap-2.5">
+            {RESUMES.map(({ href, label, download }) => (
+              <a
+                key={href}
+                href={href}
+                download={download}
+                className="inline-flex h-11.5 items-center border border-line-700 px-5.5 font-mono text-xs font-semibold tracking-[0.13em] text-paper transition-colors hover:border-line-600 hover:text-gold"
+              >
+                {label} ↓
               </a>
             ))}
           </div>

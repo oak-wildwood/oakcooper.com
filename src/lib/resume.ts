@@ -6,11 +6,25 @@ export const PROFILE = {
   email: "oak@oakcooper.com",
   linkedin: "https://linkedin.com/in/oakcooper",
   github: "https://github.com/oak-wildwood",
-  resume: "/oak-cooper-resume-2026.pdf",
   available: true,
   claim:
     "I build the UI, and I own whether it works for the user once it ships. Twenty-five years in software, from .NET backends to Angular and Vue. The last four went into a ~300-component Vue app and the NestJS/GraphQL services behind it: I built features across both, co-led its move to Vue 3, and set how the team used AI without letting speed cost quality.",
 } as const;
+
+/** Both resumes are offered: Fullstack is the default the site is positioned
+ *  around, Frontend is for frontend-only roles. Same 2026 content otherwise. */
+export const RESUMES = [
+  {
+    label: "FULLSTACK RESUME",
+    href: "/oak-cooper-resume-2026.pdf",
+    download: "Oak-Cooper-Resume-2026-Fullstack.pdf",
+  },
+  {
+    label: "FRONTEND RESUME",
+    href: "/oak-cooper-resume-2026-frontend.pdf",
+    download: "Oak-Cooper-Resume-2026-Frontend.pdf",
+  },
+] as const;
 
 export type Role = {
   start: string;

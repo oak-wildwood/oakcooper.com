@@ -1,4 +1,4 @@
-import { ROLES, EARLIER, PROFILE } from "@/lib/resume";
+import { ROLES, EARLIER, RESUMES } from "@/lib/resume";
 
 export function Experience() {
   return (
@@ -69,12 +69,18 @@ export function Experience() {
             <p className="max-w-[48ch] font-read text-base font-light leading-relaxed text-paper-faint">
               {EARLIER}
             </p>
-            <a
-              href={PROFILE.resume}
-              className="shrink-0 border-b border-gold pb-1 font-mono text-xs font-semibold tracking-[0.16em] text-gold"
-            >
-              FULL RESUME &nbsp;↓
-            </a>
+            <div className="flex shrink-0 flex-wrap gap-x-6 gap-y-3">
+              {RESUMES.map(({ href, label, download }) => (
+                <a
+                  key={href}
+                  href={href}
+                  download={download}
+                  className="border-b border-gold pb-1 font-mono text-xs font-semibold tracking-[0.16em] text-gold"
+                >
+                  {label} &nbsp;↓
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

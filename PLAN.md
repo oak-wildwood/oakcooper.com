@@ -313,6 +313,14 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   keep straight: the PR skill was adopted by **the team**, not the org; Oak used feature
   flags but didn't implement them; say "linked to backend traces", not OTel.
   `PROFILE.claim`, `SKILLS`, other roles and `EARLIER` unchanged (site voice; no new facts).
+- ✅ **Both resumes on the site — done 2026-11-18.** Decision: the site stays positioned
+  fullstack with the product-engineer framing on top (the claim is UI-first, so it reads
+  right for frontend roles too), and it now offers both PDFs. `RESUMES` in `resume.ts`
+  feeds the Hero (resume buttons on their own row, so they read as a pair), Experience,
+  and Contact; every resume link now has `download`. Fullstack keeps its old URL so
+  existing links still work; Frontend is `public/oak-cooper-resume-2026-frontend.pdf`.
+  No `/frontend` landing page: one page is enough unless frontend recruiters balk at
+  the Fullstack title.
 
 ### 5. Phase 4 — Server features
 
