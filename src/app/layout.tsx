@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Oak Cooper — Senior Fullstack Engineer",
   description:
-    "Senior fullstack engineer. Node, NestJS, Vue, TypeScript. Twenty-five years, from .NET backends to Vue frontends.",
+    "Product engineer who builds the UI and owns the outcome for the user. Twenty-five years in software: .NET, Angular, Vue, NestJS, TypeScript.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -6,11 +6,25 @@ export const PROFILE = {
   email: "oak@oakcooper.com",
   linkedin: "https://linkedin.com/in/oakcooper",
   github: "https://github.com/oak-wildwood",
-  resume: "/oak-cooper-resume-2026.pdf",
   available: true,
   claim:
-    "Senior fullstack engineer — I notice the friction other people don't, until it's gone. Twenty-five years, from .NET backends to Angular and Vue. The last four went into a ~300-component Vue app and the NestJS/GraphQL services behind it: I built features across both, co-led its move to Vue 3, and set how the team used AI without letting speed cost quality.",
+    "I build the UI, and I own whether it works for the user once it ships. Twenty-five years in software, from .NET backends to Angular and Vue. The last four went into a ~300-component Vue app and the NestJS/GraphQL services behind it: I built features across both, co-led its move to Vue 3, and set how the team used AI without letting speed cost quality.",
 } as const;
+
+/** Both resumes are offered: Fullstack is the default the site is positioned
+ *  around, Frontend is for frontend-only roles. Same 2026 content otherwise. */
+export const RESUMES = [
+  {
+    label: "FULLSTACK RESUME",
+    href: "/oak-cooper-resume-2026.pdf",
+    download: "Oak-Cooper-Resume-2026-Fullstack.pdf",
+  },
+  {
+    label: "FRONTEND RESUME",
+    href: "/oak-cooper-resume-2026-frontend.pdf",
+    download: "Oak-Cooper-Resume-2026-Frontend.pdf",
+  },
+] as const;
 
 export type Role = {
   start: string;
@@ -18,7 +32,9 @@ export type Role = {
   place: string;
   title: string;
   company: string;
-  bullets: string[];
+  /** A bullet is plain text, or a bold-ish lead-in followed by the rest of the
+   *  sentence (`text` starts with its own space or punctuation). */
+  bullets: (string | { lead: string; text: string })[];
 };
 
 export const ROLES: Role[] = [
@@ -29,14 +45,38 @@ export const ROLES: Role[] = [
     title: "Senior Software Engineer",
     company: "ACV Auctions · ACV MAX",
     bullets: [
-      "Contributed to the NestJS microservice layer behind a Vue/GraphQL platform, building features end to end across the UI, GraphQL, and domain services backed by SQL Server, Postgres, MongoDB, and third-party APIs.",
-      "Helped move data-access logic out of GraphQL resolvers into dedicated domain microservices — database-specific services first, then domain-focused ones.",
-      "Authored an ADR standardizing error handling and logging across NestJS, C#, Python, and Go services, adopted by multiple teams.",
-      "Co-led the Vue 2 → Vue 3 / Vuetify 3 migration of a ~300-component application, clearing the Vuetify breakages that were its biggest blocker and moving state from a hand-rolled GraphQL client to Pinia.",
-      "Moved the frontend deployment pipeline off Vercel and GitHub Actions onto AWS and Jenkins, rebuilding branch previews from scratch — saving ~$80K/yr.",
-      "Built frontend browser observability from scratch, twice — New Relic, then Datadog RUM — adding anomaly detection to catch the silent failures threshold alerts miss.",
-      "Cut local test-suite runtime in half and memory use by 66%, then encoded the fixes into an automated pre-PR review step.",
-      "Engineered the guardrails that keep AI-generated code trustworthy, and ran coding and systems-design interviews as the team scaled across the US and India.",
+      {
+        lead: "Contributed to the NestJS microservice layer",
+        text: " behind a Vue/GraphQL platform, building features end to end across the UI, GraphQL, and domain services backed by SQL Server, Postgres, MongoDB, and third-party APIs.",
+      },
+      {
+        lead: "Closed an unauthenticated path to production data on customer-facing dealer widgets",
+        text: " by moving embed traffic behind an authenticated proxy and gateway, with no downtime.",
+      },
+      {
+        lead: "Authored an ADR standardizing error handling and logging",
+        text: " across NestJS, C#, Python, and Go services, adopted by multiple teams.",
+      },
+      {
+        lead: "Co-led the Vue 2 to Vue 3 / Vuetify 3 migration",
+        text: " of a ~300-component application, clearing the Vuetify breakages that were its biggest blocker and moving state from a hand-rolled GraphQL client to Pinia.",
+      },
+      {
+        lead: "Moved frontend deploys off Vercel onto AWS and Jenkins, saving ~$80K/yr",
+        text: ", and rebuilt branch previews as a shared library that other teams adopted.",
+      },
+      {
+        lead: "Set up browser monitoring twice",
+        text: " — New Relic, then Datadog — and linked browser sessions to backend traces, so a slow page could be traced to the API behind it.",
+      },
+      {
+        lead: "Designed the alert for the outage nobody saw",
+        text: ": after a 2-hour GraphQL outage passed every existing check, replaced brittle threshold alerts with one self-learning anomaly monitor on GraphQL trace volume.",
+      },
+      {
+        lead: "Led Claude Code adoption",
+        text: " on the team and wrote the conventions it follows; the team uses a PR-description skill I built.",
+      },
     ],
   },
   {
@@ -46,9 +86,18 @@ export const ROLES: Role[] = [
     title: "Lead Frontend Developer",
     company: "Hudson MX",
     bullets: [
-      "Led a small frontend team owning six Angular apps and one React app for an ad-tech platform.",
-      "Introduced an Nx monorepo with a microfrontend architecture, and managed a private npm registry of shared UI components consumed by 30+ apps and microfrontends across the company.",
-      "Established a UI design system on Storybook in partnership with the UX team.",
+      {
+        lead: "Led a small frontend team",
+        text: " owning six Angular apps and one React app for an ad-tech platform.",
+      },
+      {
+        lead: "Introduced an Nx monorepo with a microfrontend architecture",
+        text: ", and managed a private npm registry of shared UI components consumed by 30+ apps and microfrontends across the company.",
+      },
+      {
+        lead: "Established a UI design system on Storybook",
+        text: " in partnership with the UX team.",
+      },
     ],
   },
   {
@@ -58,9 +107,18 @@ export const ROLES: Role[] = [
     title: "Lead Developer",
     company: "Dick's Sporting Goods · Blue Sombrero",
     bullets: [
-      "Led the frontend architectural redesign of the flagship registration product in TypeScript and Angular, with a microfrontend strategy built on Angular Elements.",
-      "Built RESTful backend services and controllers in ASP.NET MVC, using C# and Entity Framework against SQL Server — roughly a third of the role alongside the frontend architecture.",
-      "Introduced Jest and Cypress, and established mandatory pre-merge build, lint and test checks.",
+      {
+        lead: "Led the frontend architectural redesign of the flagship registration product",
+        text: " in TypeScript and Angular, with a microfrontend strategy built on Angular Elements.",
+      },
+      {
+        lead: "Built RESTful backend services and controllers in ASP.NET MVC",
+        text: ", using C# and Entity Framework against SQL Server — roughly a third of the role alongside the frontend architecture.",
+      },
+      {
+        lead: "Introduced Jest and Cypress",
+        text: ", and established mandatory pre-merge build, lint and test checks.",
+      },
     ],
   },
 ];

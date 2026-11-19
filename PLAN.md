@@ -302,6 +302,36 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   frontend; Job Funnel is the strongest backend side project but its repo can't
   go public as-is (see the Vault note). A trimmed public repo is the next step.
 
+- ✅ **Resume refresh — done 2026-11-18.** New PDF from
+  `~/Documents/2026 Job Search/Oak Cooper Resume 2026 (Fullstack).pdf` (product-engineer
+  framing, Oak's fact corrections). ACV bullets synced: added the embed auth fix, the
+  outage-alert story, and Claude Code adoption with the team's use of the PR-description
+  skill; previews now say other teams adopted them; monitoring now says "linked browser
+  sessions to backend traces". Dropped the data-access bullet (cut from the resume as weaker
+  evidence), the "guardrails / ran interviews" bullet (replaced on the resume), and the
+  test-suite bullet (still on the PDF; left off to keep the role at 8 bullets). Facts to
+  keep straight: the PR skill was adopted by **the team**, not the org; Oak used feature
+  flags but didn't implement them; say "linked to backend traces", not OTel.
+  `PROFILE.claim`, `SKILLS`, other roles and `EARLIER` unchanged (site voice; no new facts).
+- ✅ **Both resumes on the site — done 2026-11-18.** Decision: the site stays positioned
+  fullstack with the product-engineer framing on top (the claim is UI-first, so it reads
+  right for frontend roles too), and it now offers both PDFs. `RESUMES` in `resume.ts`
+  feeds the Hero (resume buttons on their own row, so they read as a pair), Experience,
+  and Contact; every resume link now has `download`. Fullstack keeps its old URL so
+  existing links still work; Frontend is `public/oak-cooper-resume-2026-frontend.pdf`.
+  No `/frontend` landing page: one page is enough unless frontend recruiters balk at
+  the Fullstack title.
+- ✅ **Designed resumes — done 2026-11-18.** Both site PDFs swapped for the designed
+  versions (`… - Designed.pdf`, generated from the Docs by `~/Code/resume-design` and
+  checked against five text extractors). Same wording as the plain PDFs; the plain ones
+  stay for ATS upload forms. URLs unchanged.
+- ✅ **Experience bullet lead-ins — done 2026-11-18.** Every role's bullets are now
+  `{ lead, text }` in `resume.ts`; `Experience.tsx` renders the lead in `font-medium
+  text-paper` (brighter, not heavier) so each role scans quickly. ACV leads match the
+  resume's bold leads; Hudson and Dick's leads are the opening clause of each bullet (the
+  resume has no leads for those roles). The rest keeps the site's fuller wording. Plain
+  strings are still accepted and render without a lead.
+
 ### 5. Phase 4 — Server features
 
 Contact form as a **Server Action** (Oak writes this — highest-value learning in the
