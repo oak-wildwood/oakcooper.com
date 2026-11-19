@@ -321,6 +321,10 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   existing links still work; Frontend is `public/oak-cooper-resume-2026-frontend.pdf`.
   No `/frontend` landing page: one page is enough unless frontend recruiters balk at
   the Fullstack title.
+- ✅ **Designed resumes — done 2026-11-18.** Both site PDFs swapped for the designed
+  versions (`… - Designed.pdf`, generated from the Docs by `~/Code/resume-design` and
+  checked against five text extractors). Same wording as the plain PDFs; the plain ones
+  stay for ATS upload forms. URLs unchanged.
 
 ### 5. Phase 4 — Server features
 
