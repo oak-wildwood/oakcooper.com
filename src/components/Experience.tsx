@@ -52,14 +52,24 @@ export function Experience() {
                   {role.company.toUpperCase()}
                 </p>
                 <ul className="mt-4 flex flex-col gap-2.5">
-                  {role.bullets.map((b) => (
-                    <li
-                      key={b}
-                      className="text-base leading-relaxed text-paper-mute"
-                    >
-                      {b}
-                    </li>
-                  ))}
+                  {role.bullets.map((b) =>
+                    typeof b === "string" ? (
+                      <li
+                        key={b}
+                        className="text-base leading-relaxed text-paper-mute"
+                      >
+                        {b}
+                      </li>
+                    ) : (
+                      <li
+                        key={b.lead}
+                        className="text-base leading-relaxed text-paper-mute"
+                      >
+                        <span className="font-medium text-paper">{b.lead}</span>
+                        {b.text}
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
             </article>

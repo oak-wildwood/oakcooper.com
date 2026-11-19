@@ -325,6 +325,12 @@ Needs index state, keyboard navigation (arrows, Escape), and focus management.
   versions (`… - Designed.pdf`, generated from the Docs by `~/Code/resume-design` and
   checked against five text extractors). Same wording as the plain PDFs; the plain ones
   stay for ATS upload forms. URLs unchanged.
+- ✅ **Experience bullet lead-ins — done 2026-11-18.** Every role's bullets are now
+  `{ lead, text }` in `resume.ts`; `Experience.tsx` renders the lead in `font-medium
+  text-paper` (brighter, not heavier) so each role scans quickly. ACV leads match the
+  resume's bold leads; Hudson and Dick's leads are the opening clause of each bullet (the
+  resume has no leads for those roles). The rest keeps the site's fuller wording. Plain
+  strings are still accepted and render without a lead.
 
 ### 5. Phase 4 — Server features
 
